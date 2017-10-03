@@ -1,0 +1,15 @@
+<p>
+  <strong>Associate name:</strong>
+  <%= associate.name %>
+</p>
+ 
+<p>
+  <strong>Description:</strong>
+  <%= associate.description %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Associate', [associate.department, associate],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

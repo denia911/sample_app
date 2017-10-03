@@ -1,0 +1,27 @@
+<div class="center jumbotron"><h1> Departments list</h1>
+<%= link_to 'New department', new_department_path %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>|</th>
+    <th>Description</th>
+    <th colspan="3"></th>
+  </tr>
+ 
+  <% @department.each do |departments| %>
+    <tr>
+      <td><%= departments.name %></td>
+      <td>|</td>
+      
+      <td><%= departments.description %></td>
+      <td><%= link_to 'Show', department_path(departments) %></td>
+
+       <td padding-left: 1.8em><%= link_to 'Edit ', edit_department_path(departments) %></td>
+      
+      <td padding-left: 1.8em><%= link_to 'Destroy ', department_path(departments),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+</div>
